@@ -24,12 +24,12 @@ from datetime import datetime
 
 scopes = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
-json_file = r'C:\Users\HN4-00012\Documents\Bridge\face-id-022a16cbf2d0.json'
+json_file = r'jsonファイルの指定'
 credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file, scopes=scopes)
 http_auth = credentials.authorize(Http())
 
-doc_id = '1f0wXrRdXSR2TJ_RoFZ3sv66UnZNBRJb0UlaBjHDFMrw'
-SPREADSHEET_KEY = '1f0wXrRdXSR2TJ_RoFZ3sv66UnZNBRJb0UlaBjHDFMrw'
+doc_id = 'GasID'
+SPREADSHEET_KEY = 'スプレットシートKEY'
 client = gspread.authorize(credentials)
 gfile = client.open_by_key(doc_id)
 gc = gspread.authorize(credentials)
